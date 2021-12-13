@@ -35,21 +35,29 @@ The data was first split in to Training and Testing datasets.  A Logistic Regres
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
-
-* Logistic Regression Model 1 -- original data:
+* Logistic Regression Model 1 -- Original data:
 <pre>
   * Accuracy:   95%
   * Precision:  85%
   * Recall:     91%
+  * F1:         88%
 </pre>
 
-* Logistic Regression Model 2 -- over-sampled data:
+* Logistic Regression Model 2 -- Over-sampled data:
 <pre>
-  * Accuracy:       95%
-  * Precision:      84% (about the same, meaning we have not increased false positives)
-  * Recall:         99% (represents improved prediction of loans that will default)
+  * Accuracy:   95%
+  * Precision:  84%
+  * Recall:     99%
+  * F1:         91%
 </pre>
+---
+
+## Summary
+
+The accuracy is unchanged between the two models.  Precision dropped slightly, so we can be sure that using oversampled data did not increase false-positives.  Based only these two measures, it would seem that there is no benefit to random-oversampling in this case.
+
+However, Recall did improve with oversampled data, meaning that the second model improved prediction of loans that could default. This is reflected in the modest F1 improvement from 88% to 91%, so I would recommend using the second model.
+
 ---
 ## Contributors
 
